@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stilus.css">
+    <link rel="icon" type="image" href="kepek/favicon.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>JS alapok</title>
+</head>
+<body>
+    <div class="egesz1">
+    <div class="egesz2">
+    <h1>Mit tud a JavaScript?</h1>
+    <hr rounded="solid">
+        <div class="elso">
+            <button type="button" class="btn btn-outline-primary"
+            onclick="document.getElementById('demo').innerHTML = Date()">
+            Mai dátum és idő megjelenítése</button>
+            <input class="btn btn-outline-primary" type="reset" value="Törlés">
+            <p id="demo"></p>
+        <img src="kepek/w3kicsi.png" alt="ctrlcctrlv">
+        </div>
+        <hr rounded="solid">
+        <div class="masodik">
+            <button class="btn btn-outline-primary" onclick="document.getElementById('myImage').src='kepek/pic_bulbon.gif'">Kapcsold fel!</button>
+
+            <img id="myImage" src="kepek/pic_bulbon.gif" style="width:100px">
+
+            <button class="btn btn-outline-primary" onclick="document.getElementById('myImage').src='kepek/pic_bulboff.gif'">Kapcsold le!</button>
+            <br><br>
+            <a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_myfirst"><img src="kepek/w3kicsi.png" alt="ctrlcctrlv"></a>
+            <hr rounded="solid">
+        </div>
+        <div class="harmadik">
+            <h2>JavaScript megváltoztatja a HTML elemek stílusát</h2>
+            <p id="demo2">Megvátoztathatatod a bekezdésed kinézetét
+            </p>
+
+            <button class="btn btn-outline-primary" type="button" onclick="document.getElementById('demo2').style.fontSize='30px'">Betűméret</button>
+            <button class="btn btn-outline-primary" type="button" onclick="document.getElementById('demo2').style.color='blue'">Betűszín</button>
+            <button class="btn btn-outline-primary" type="button" onclick="document.getElementById('demo2').style.fontFamily='Georgia, serif'">Betűtípus</button>
+            <button class="btn btn-outline-primary" type="button" onclick="document.getElementById('demo2').style.border='1px solid black'">Szegély</button>
+            <button class="btn btn-outline-primary" type="button" onclick="document.getElementById('demo2').style.margin='30px 10px 30px'">Belső margó</button>
+            <button class="btn btn-outline-primary" type="button" onclick="document.getElementById('demo2').style.margin='30px 50px 30px'">Külső margó</button>
+            <br>
+            <button class="btn btn-outline-primary" type="button" onclick="document.getElementById('demo2').style.backgroundColor='orange'">Háttérszín</button>
+            <br><br>
+            <img src="kepek/w3kicsi.png" alt="ctrlcctrlv">
+            
+        </div>
+    </div>
+</div>
+</div
+</body>
+</html>
