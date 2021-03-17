@@ -10,20 +10,127 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  
     <title>JS alapok</title>
 </head>
 <body>
-    <div class="egesz1">
-    <div class="egesz2">
+    <div class="egesz">
     <h1>Mit tud a JavaScript?</h1>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <button type="button" class="btn btn-outline-primary">Változtass</button>
+          </li>
+          <li class="nav-item">
+            <button type="button" onclick="darkLight()" class="btn btn-outline-primary">Éjszakai mód/Nappali mód</button>
+          </li>
+          <li class="nav-item">
+            <button type="button" onclick="rainbow()" class="btn btn-outline-primary">Pasztel,harsány színek/Eredeti mód</button>
+          </li> 
+          <li class="nav-item">
+            <button id="btn2" class="btn btn-outline-primary">Megjelenít</button>
+          </li> 
+          <li class="nav-item">
+            <button id="btn1" class="btn btn-outline-primary">Átméretez</button>
+          </li>   
+        </ul>
+      </nav>
+      <script>
+        function darkLight() {
+           var element = document.body;
+           element.classList.toggle("dark-mode");
+        }
+        </script>
+        
+      <script>
+        function rainbow() {
+           var element = document.body;
+           element.classList.toggle("rainbow");
+        }
+        </script>
+
+        <script>
+            function myFunction() {
+              alert("Illés Norbert");
+            }
+            </script>
+
+        <br>
+    <div class="gombok">
+        <div class="d-grid gap-2">
+        <button onclick="myFunction()" id="egygomb" type="button" class="btn btn-outline-warning" >Szerző</button>
+            <br><br>
+        <button id="kettogomb" onclick="window.print()" type="button" class="btn btn-outline-warning">Oldal nyomtatása</button>
+        <br><br>
+        </div>
+    </div>
+    <hr rounded="solid">
+<br><br>
+    <h1>Kép megjelenítése és eltüntetése!</h1>
+    <br>
+    <p><strong> menüben lévő megjelenítés gombbal tudod előhozni a képet és eltüntetni</strong>A </p>
+    <p><strong>Az átméretez gombbal amely szintén a menüben van át tudod méretezni a képet!</strong></p>
+    <br><br>
+    <img src="kepek/2bbfbdbfc80226ecb9af283184625ac4.jpg" alt="dassda" id="kep1" style="width: 300px; height: 350px; display: block;">
+    
+    
+    
+    <script>
+        const button1=idleker("btn1");
+        const image=idleker("kep1");
+        const button2=idleker("btn2");
+
+
+        button1.addEventListener("click", kepMeret);
+        button2.addEventListener("click", megjelenit);
+
+        function pValtozas(){
+            pszoveg.style.background="red";
+        }
+
+        function megjelenit(){
+            if(image.style.display==="block"){
+                image.style.display="none";
+            }
+            else{
+                image.style.display="block";
+            }
+        }
+
+
+        function kepMeret(){
+            if(image.style.width=="50px"){
+                image.style.height="250px";
+                image.style.width="300px";
+            }
+            else{
+                image.style.height="50px";
+                image.style.width="50px";
+            }
+        }
+
+
+        function idleker(idleker){
+            return document.getElementById(idleker);
+        }
+
+
+
+
+            
+        </script>
+
+        <br><br>
     <hr rounded="solid">
         <div class="elso">
+            <form name="datum">
             <button type="button" class="btn btn-outline-primary"
-            onclick="document.getElementById('demo').innerHTML = Date()">
-            Mai dátum és idő megjelenítése</button>
-            <input class="btn btn-outline-primary" type="reset" value="Törlés">
+            onclick="document.getElementById('demo').innerHTML = Date()">Mai dátum és idő megjelenítése</button>
+            <button type="demo.reset" class="btn btn-outline-primary">Törlés</button>
+        </form>
             <p id="demo"></p>
-        <img src="kepek/w3kicsi.png" alt="ctrlcctrlv">
+        <a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_myfirst" target="blank"><img src="kepek/w3kicsi.png" alt="ctrlcctrlv" id="kep1"></a>
         </div>
         <hr rounded="solid">
         <div class="masodik">
@@ -33,7 +140,7 @@
 
             <button class="btn btn-outline-primary" onclick="document.getElementById('myImage').src='kepek/pic_bulboff.gif'">Kapcsold le!</button>
             <br><br>
-            <a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_myfirst"><img src="kepek/w3kicsi.png" alt="ctrlcctrlv"></a>
+            <a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_intro_lightbulb" target="blank"><img src="kepek/w3kicsi.png" alt="ctrlcctrlv"></a>
             <hr rounded="solid">
         </div>
         <div class="harmadik">
@@ -50,11 +157,11 @@
             <br>
             <button class="btn btn-outline-primary" type="button" onclick="document.getElementById('demo2').style.backgroundColor='orange'">Háttérszín</button>
             <br><br>
-            <img src="kepek/w3kicsi.png" alt="ctrlcctrlv">
+            <a href="https://getbootstrap.com/docs/5.0/utilities/background/" target="blank"><img src="kepek/w3kicsi.png" alt="ctrlcctrlv"></a>
             
         </div>
     </div>
 </div>
-</div
+    </div>
 </body>
 </html>
